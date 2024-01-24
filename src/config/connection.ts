@@ -1,8 +1,8 @@
 import { createPool } from "mysql2/promise";
 
 export const pool = createPool({
-    host: 'restapidb',
+    host: process.env.MYSQLDB_HOST,
     user: 'root',
-    password: '123456',
-    port: 3307
+    password: process.env.MYSQLDB_PASSWORD,
+    port: parseInt(process.env.MYSQLDB_DOCKER_PORT || '3308')
 });

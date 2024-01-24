@@ -2,7 +2,7 @@ import express from 'express'
 import 'dotenv/config';
 import { gretingsRouter } from './routes/greetings.routes';
 
-const PORT = process.env.PORT;
+const PORT = process.env.NODE_DOCKER_PORT;
 
 const app = express();
 
